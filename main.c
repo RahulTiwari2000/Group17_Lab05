@@ -29,5 +29,17 @@ int main()
                {
                   // do nothing
                }
+void GPIO_Handler(void)
+{
+    if(GPIO_PORTF_RIS_R & 0x10)
+    {
+
+            GPIO_PORTF_DATA_R ^= 0x02;
+
+            // Clear the interrupt
+            GPIO_PORTF_ICR_R = 0x10;
+
+    }
+}
 
 
