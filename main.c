@@ -21,6 +21,13 @@ void init(void)
                       NVIC_EN0_R = 0x40000000;
 
 }
-
+int main()
+{
+    init();
+    GPIO_PORTF_DATA_R = 0x00; //Making red led to be off initially
+               while(1)
+               {
+                  // do nothing
+               }
 
 
